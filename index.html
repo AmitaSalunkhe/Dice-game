@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title> Dice Game</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <style>
+   .new5
+   {
+       margin-left: 60px;
+   }
+   </style>
+    </head>
+
+    <body style="background-image: url('./assets/dice.gif'); background-repeat: no-repeat; background-size: cover; color: white;">
+    
+<h1  class="h11">Dice Game</h1>
+       <h1 class="new3 h12" ></h1><br> <br>
+       <div style="margin-left: 400px; ">
+     
+    <div class="row" style="color:white;">
+        <div >
+            <h2  >Player A </h2>
+            <img src="assets/dice1.png" class="mr-auto-d-block new" style="margin-right: 100px;">  
+            
+        </div>
+        <div >
+            <h2 >Player B</h2>
+            <img src="assets/dice2.png"  class="mr-auto-d-block new1"> 
+        </div>
+    </div><br><br>
+       <div style="margin-left: 30px;">
+        <button onclick="cal()" class="btn   btn-lg btn1" >Play</button><br><br><br>
+    
+       </div> 
+           
+   
+       
+        <script>
+         function cal()
+         {
+             var a = Math.ceil(Math.random()*6);
+             var img1="assets/dice"+a+".png";
+             document.getElementsByClassName("new")[0].setAttribute("src",img1);
+            
+             var b =Math.ceil(Math.random()*6);
+              var img2="assets/dice"+b+".png";
+              document.getElementsByClassName("new1")[0].setAttribute("src",img2);
+             
+             
+              if(a>b)
+              {
+                document.getElementsByClassName("new3")[0].innerHTML="Player A winner!!";
+              }
+             else if(a==b)
+             {
+                 document.getElementsByClassName("new3")[0].innerHTML=" Match Draw";
+
+             }
+             else{
+                 document.getElementsByClassName("new3")[0].innerHTML="Player  B winner!!";
+             }
+         }
+        </script>
+    </body>
+    </html>
